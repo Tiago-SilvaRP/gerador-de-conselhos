@@ -4,7 +4,7 @@ conselhos aleatórios consumindo uma API externa. E praticar
 minhas habilidades com consumo de APIs, manipulação de eventos,
 estilização com CSS, HTML e resposividade.
 
-## 📝 Descrição do Projeto~
+## 📝 Descrição do Projeto
 
 A aplicação é uma interface simples e interativa que exibe um 
 conselho aleatório a cada clique em um botão. 
