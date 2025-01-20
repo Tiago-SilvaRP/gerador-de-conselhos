@@ -23,6 +23,10 @@ h1 {
     color: hsl(150, 100%, 66%);
 }
 
+h1 span{
+    margin-left: 10px;
+}
+
 .texto {
     color: hsl(193, 38%, 86%);
     margin: 10px 10px 20px;
