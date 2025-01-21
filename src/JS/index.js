@@ -10,7 +10,7 @@ document.getElementById('gerar-conselho').addEventListener('click', () => {
             const url = "https://api.adviceslip.com/advice"
             const resposta = await fetch(url)
             if(!resposta.ok){
-                throw new error('Deu erro na busca do conselho da API')
+                throw new Error('Deu erro na busca do conselho da API')
             }
             const json = await resposta.json()         
             return texto.innerText = json.slip.advice,
