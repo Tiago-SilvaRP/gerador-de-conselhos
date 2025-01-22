@@ -1,6 +1,3 @@
-const texto = document.getElementById('descricao')
-const numeroDoConselho = document.getElementById('numero-conselho')
-
 document.getElementById('gerar-conselho').addEventListener('click', () => {
     buscandoConselhoAleatorio()
     
@@ -12,9 +9,17 @@ document.getElementById('gerar-conselho').addEventListener('click', () => {
             if(!resposta.ok){
                 throw new Error('Deu erro na busca do conselho da API')
             }
-            const json = await resposta.json()         
-            return texto.innerText = json.slip.advice,
-            numeroDoConselho.innerText = json.slip.id
+
+            const json = await resposta.json() 
+            const idDoConselho = json.slip.id;  
+            const conselhoGerado = json.slip.advice;      
+            let numeroDoConselho = document.getElementById('numero-conselho')
+            let texto = document.getElementById('descricao')
+
+            numeroDoConselho.innerText = `ADVICE  #${idDoConselho}`
+            texto.innerText = `${conselhoGerado}`
+            
+
         } catch (error) {
             console.log(error);
         }
